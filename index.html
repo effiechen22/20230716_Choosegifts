@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>選禮物</title>
+   <link rel="icon" href="./images/icon.png">
+   <style>
+      /* 关闭按钮样式 */
+      .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        color: #000;
+      }
+
+      ol li{
+         font-size: 14px;
+         opacity: 0.6;
+      }
+   </style>
+   <script>
+    function closeCard(btn) {
+      // 通过 JavaScript 关闭对应的卡片
+      var card = btn.closest('.cardblock');
+      card.style.display = 'none';
+    }
+   </script>   
+
+   <link rel="stylesheet" href="./scss/all.css">
+
+</head>
+<body>
+
+   <!-- 👉🏻導覽列+sticky-top -->
+   <nav class="navbar navbar-expand-lg bg-white sticky-top border-4 border-primary border-top pt-3">
+      <div class="container bg-white">
+
+         <div class=" bg-white">
+         <img src="./images/icon.png" alt="" width="40px;">
+         選禮物
+         </div>
+
+
+         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-lg-0 ">
+                  <li class="nav-item px-3">
+                     <a class="nav-link  text-center active" aria-current="page" href="./index.html">全部</a>
+                  </li>
+                  <li class="nav-item px-3">
+                     <a class="nav-link  text-center " href="#smartwatchs">智慧手錶</a>
+                  </li>
+                  <li class="nav-item px-3">
+                     <a class="nav-link  text-center  " href="#smartphones">智慧手機</a>
+                  </li>
+                  <li class="nav-item px-3">
+                     <button type="button" class="btn btn-primary w-100 rounded-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        常見規格比較
+                      </button>
+                  </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+
+
+   
+   <main >  
+      <!-- Modal常見規格比較 -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+         <div class="modal-dialog modal-xl" >
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">常見規格比較</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div> 
+            <div class="modal-body table-responsive" >
+               <table class="table  text-nowrap caption-top" style="font-size: 14px;">
+                  <caption>M系列</caption>
+                  <thead class="fw-bold">
+                     <th>產品品名</th>
+                     <th>儲存容量</th>
+                     <th>產品定價</th>
+                     <th>手機尺寸</th>
+                     <th>鏡頭畫素</th>
+                     <th>電量</th>
+                  </thead>
+                  <tbody>
+                  <tr>
+                     <td>Galaxy M14 5G</td>
+                     <td>64GB</td>
+                     <td>6,490</td>
+                     <td>6.6吋</td>
+                     <td>5000萬</td>
+                     <td>6,000mAh</td>
+                  </tr>
+                  <tr class="table-danger">
+                     <td>Galaxy M33 5G</td>
+                     <td>128GB</td>
+                     <td>8,490</td>
+                     <td>6.6吋</td>
+                     <td>5000萬</td>
+                     <td>5,000mAh</td>
+                  </tr>
+                  </tbody>
+               </table>
+
+               <table class="table  text-nowrap caption-top" style="font-size: 14px;">                  
+                  <caption>A系列</caption>
+                  <thead class="fw-bold">
+                     <th>產品品名</th>
+                     <th>儲存容量</th>
+                     <th>產品定價</th>
+                     <th>手機尺寸</th>
+                     <th>鏡頭畫素</th>
+                     <th>電量</th>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td rowspan="2">Galaxy A54 5G</td>
+                        <td>128GB</td>
+                        <td>13,990</td>
+                        <td rowspan="2">6.4 吋</td>
+                        <td rowspan="2">5000萬</td>
+                        <td rowspan="2">5,000mAh</td>
+                     </tr>
+                     <tr>
+                        <td>256GB</td>
+                        <td>15,990</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2">Galaxy A34 5G</td>
+                        <td>6+128GB</td>
+                        <td>11,990</td>
+                        <td rowspan="2">6.6 吋</td>
+                        <td rowspan="2">4800萬</td>
+                        <td rowspan="2">5,000mAh</td>
+                     </tr>
+                     <tr>
+                        <td>8+256GB</td>
+                        <td>12,990</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2">Galaxy A14 5G</td>
+                        <td>64GB</td>
+                        <td>6,990</td>
+                        <td rowspan="2">6.6 吋</td>
+                        <td rowspan="2">5000 萬</td>
+                        <td rowspan="2">5,000 mAh</td>
+                     </tr>
+                     <tr>
+                        <td>128GB</td>
+                        <td>7,990</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2">Galaxy A23 5G</td>
+                        <td>4+64GB</td>
+                        <td>8,990</td>
+                        <td rowspan="2">6.6 吋</td>
+                        <td rowspan="2">5000 萬</td>
+                        <td rowspan="2">5,000 mAh</td>
+                     </tr>
+                     <tr>
+                        <td>6+128GB</td>
+                        <td>9,990</td>
+                     </tr>
+                     <tr>
+                        <td rowspan="2">Galaxy A13 5G</td>
+                        <td>128GB</td>
+                        <td>6,990</td>
+                        <td rowspan="2">6.5 吋</td>
+                        <td rowspan="2">5000 萬</td>
+                        <td rowspan="2">5,000 mAh</td>
+                     </tr>
+                     <tr>
+                        <td>128GB</td>
+                        <td>7,990</td>
+                     </tr>
+                     <tr class="table-danger">
+                        <td rowspan="2">Galaxy A53 5G</td>
+                        <td>8+128GB</td>
+                        <td>14,990</td>
+                        <td rowspan="2">6.5 吋</td>
+                        <td rowspan="2">6400 萬</td>
+                        <td rowspan="2">5,000 mAh</td>
+                     </tr>
+                     <tr class="table-danger">
+                        <td>8+256GB</td>
+                        <td>15,990</td>
+                     </tr>
+                     <tr class="table-danger">
+                        <td rowspan="2">Galaxy A33 5G</td>
+                        <td>6+128GB</td>
+                        <td>11,990</td>
+                        <td rowspan="2">6.4 吋</td>
+                        <td rowspan="2">4800 萬</td>
+                        <td rowspan="2">5,000 mAh</td>
+                     </tr>
+                     <tr class="table-danger">
+                        <td>8+128GB</td>
+                        <td>12,990</td>
+                     </tr>
+                  </tbody>
+                  </table>
+
+                  <table class="table  text-nowrap caption-top" style="font-size: 14px;">                  
+                     <caption>S系列</caption>
+                  <thead class="fw-bold">
+                     <th>產品品名</th>
+                     <th>儲存容量</th>
+                     <th>產品定價</th>
+                     <th>手機尺寸</th>
+                     <th>鏡頭畫素</th>
+                     <th>電量</th>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <td  rowspan="2">Galaxy S23</td>
+                        <td>128GB</td>
+                        <td>26,990</td>
+                        <td rowspan="2">6.1 吋</td>
+                        <td rowspan="2">5000 萬</td>
+                        <td rowspan="2">3,900 mAh</td>
+                     </tr>
+                     <tr>
+                        <td>256GB</td>
+                        <td>28,990</td>
+                     </tr>
+                     <tr>
+                        <td  rowspan="2">Galaxy S23+</td>
+                        <td>256GB</td>
+                        <td>33,900</td>
+                        <td rowspan="2">6.6 吋</td>
+                        <td rowspan="2">5000 萬</td>
+                        <td rowspan="2">4,700 mAh</td>
+                     </tr>
+                     <tr>
+                        <td>512GB</td>
+                        <td>37,900</td>
+                     </tr>
+                     <tr>
+                        <td  rowspan="2">Galaxy S23 Ultra</td>
+                        <td>256GB</td>
+                        <td>40,900</td>
+                        <td rowspan="2">6.8 吋</td>
+                        <td rowspan="2">2 億</td>
+                        <td rowspan="2">5,000 mAh</td>
+                     </tr>
+                     <tr>
+                        <td>512GB</td>
+                        <td>44,900</td>
+                     </tr>
+                     <tr>
+                        <td  rowspan="2">Galaxy S22</td>
+                        <td>128GB</td>
+                        <td>24,900</td>
+                        <td rowspan="2">6.1 吋</td>
+                        <td rowspan="2">5000 萬</td>
+                        <td rowspan="2">3700 mAh</td>
+                     </tr>
+                     <tr>
+                        <td>256GB</td>
+                        <td>26,900</td>
+                     </tr>
+                     <tr class="table-danger">
+                        <td  rowspan="2">Galaxy S22+</td>
+                        <td>128GB</td>
+                        <td>29,900</td>
+                        <td rowspan="2">6.6 吋</td>
+                        <td rowspan="2">5000 萬</td>
+                        <td rowspan="2">4500 mAh</td>
+                     </tr>
+                     <tr class="table-danger">
+                        <td>256GB</td>
+                        <td>31,900</td>
+                     </tr>
+                     <tr class="table-danger">
+                        <td  rowspan="2">Galaxy S22 Ultra</td>
+                        <td>256GB</td>
+                        <td>38,900</td>
+                        <td rowspan="2">6.8 吋</td>
+                        <td rowspan="2">1.8 億</td>
+                        <td rowspan="2">5000 mAh</td>
+                     </tr>
+                     <tr class="table-danger">
+                        <td>512GB</td>
+                        <td>28,900</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+         </div>
+         </div>
+      </div> 
+      
+      <div class="container py-4"> 
+      <div class="accordion " id="accordionPanelsStayOpenExample">
+            <div class="d-flex justify-content-between mt-3">
+               <h5 id="smartwatchs" class="text-primary  border-start border-4 border-primary ps-2 bg-white " style="top:80px;">智慧手錶</h5>
+               <span class=" text-secondary" style="font-size: 14px;">🕒更新日期 2023-7-16</span>
+            </div>
+         <!-- 層 Galaxy Watch-->
+         <div class="accordion-item">
+            <!-- 手風琴樣式 -->
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#GalaxyWatch" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  Galaxy Watch - 5,489起
+               </button>
+            </h2>
+            <!-- 內容 GalaxyWatch  -->
+            <div id="GalaxyWatch" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+               <div class="accordion-body">
+                  <div class="row gy-4">
+                     <!-- Galaxy GalaxyWatch4 -->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center  h-100">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/assets/tw/watches/galaxy-watch/galaxy-watch5/images/galaxy-watch4-s-black-front.jpg" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy Watch4</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">幻影黑/鈦灰銀/玫瑰金</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2 h-100" style="list-style-type: disc;">
+                                       <li>時尚科技設計</li>
+                                       <li>全方位健康及運動偵測</li>
+                                       <li>全新升級作業系統 App下載更多元</li>
+                                    </ol>
+                                    
+                                    <div class="row g-1 ">
+
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                          <input type="checkbox" class="btn-check" id="Watch4-blue-40" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="Watch4-blue-40">
+                                             <span class="badge bg-light text-dark">藍芽 40mm</span>
+                                             <br>-</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                          <input type="checkbox" class="btn-check" id="Watch4-blue-44" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="Watch4-blue-44">
+                                             <span class="badge bg-light text-dark">藍芽 44mm</span>
+                                             <br>NT5,489</label>
+                                       </div>
+                                       <a href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=10602623&osm=Biggo&utm_source=CPA&utm_medium=biggo_WD8tXYkBwOGOY10_F0Jy" class="text-decoration-none">MOMO購物A級福利品</a>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy GalaxyWatch5 -->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center h-100">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/assets/tw/watches/galaxy-watch/galaxy-watch5/images/galaxy-watch5-s-graphite-front.jpg" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy Watch5</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">幻影黑/辰曜銀/雲霧粉</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2 h-100" style="list-style-type: disc;">
+                                       <li>BIA身體組成分析 輕鬆追蹤目標</li>
+                                       <li>睡眠血氧偵測2.0 貼心守護</li>
+                                       <li>堅硬藍寶石鏡面 疾速快充電量升級</li>
+                                    </ol>
+                                    
+                                    <div class="row g-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="Watch5-lte40" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="Watch5-lte40">
+                                                <span class="badge bg-light text-dark">LTE 40mm</span>
+                                                <br>NT10,990</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="Watch5-lte44" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="Watch5-lte44">
+                                                <span class="badge bg-light text-dark">LTE 44mm</span>
+                                                <br>NT$11,990</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                          <input type="checkbox" class="btn-check" id="Watch5-blue40" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="Watch5-blue40">
+                                             <span class="badge bg-light text-dark">藍芽 40mm</span>
+                                             <br>NT8,990</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                          <input type="checkbox" class="btn-check" id="Watch5-blue44" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="Watch5-blue44">
+                                             <span class="badge bg-light text-dark">藍芽 44mm</span>
+                                             <br>NT9,990</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy GalaxyWatch5 Pro -->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center h-100">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/assets/tw/watches/galaxy-watch/galaxy-watch5/images/galaxy-watch5-pro-black-front.jpg" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy Watch5 Pro</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">酷炫黑/鈦晶灰</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2 h-100" style="list-style-type: disc;">
+                                       <li>20&80小時 強大的電池續航力</li>
+                                       <li>精品鈦金屬材質 精緻磁吸錶帶</li>
+                                       <li>戶外運動專屬 GPS 精準定位</li>
+                                    </ol>
+                                    
+                                    <div class="row g-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="Watch5p-lte40" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="Watch5p-lte40">
+                                                <span class="badge bg-light text-dark">LTE 45mm</span>
+                                                <br>-</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                          <input type="checkbox" class="btn-check" id="Watch5p-blue40" autocomplete="off">
+                                          <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="Watch5p-blue40">
+                                             <span class="badge bg-light text-dark">藍芽 45mm</span>
+                                             <br>NT15,990</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+
+      </div>
+
+      <div class="accordion " id="accordionPanelsStayOpenExample">
+         <div class="d-flex justify-content-between mt-5">
+            <h5 id="smartphones" class="text-primary  border-start border-4 border-primary ps-2 bg-white " style="top:80px;">智慧手機</h5>
+            <button type="button" class="btn text-primary rounded-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+               常見規格比較
+             </button>
+         </div>
+
+         <!-- 層 Galaxy M-->
+         <div class="accordion-item">
+            <!-- 手風琴樣式 -->
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#GalaxyM" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  Galaxy M系列 - 超規格、超值得 - 6,490起
+               </button>
+            </h2>
+            <!-- 內容 Galaxy M1  -->
+            <div id="GalaxyM" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
+               <div class="accordion-body">
+
+                  <div class="row gy-4">
+                     <!-- Galaxy M14 5G -->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center h-100">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/sm-m146bdbubri/gallery/tw-galaxy-m14-sm-m146-sm-m146bdbubri-thumb-535717248?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy M14 5G</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">冰雪藍/闇夜藍/星燦銀</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2 h-100" style="list-style-type: disc;">
+                                       <li>6.6吋FHD+大螢幕 90Hz螢幕更新率</li>
+                                       <li>6,000mAh 超大電量 (典型值)</li>
+                                       <li>5000萬高畫素主鏡頭</li>
+                                    </ol>
+                                    
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="M14" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="M14">
+                                                <span class="badge bg-light text-dark">64 GB</span>
+                                                <br> NT6,490</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Galaxy M33 5G -->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center h-100">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/sm-m336bzbgbri/gallery/tw-galaxy-m33-5g-sm-m336-sm-m336bzbgbri-thumb-531589043?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0 h-100">
+                                       <h5 class="card-title fw-bold">
+                                       <span class="badge bg-danger text-light">熱銷</span>
+                                       Galaxy M33 5G</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">大亨藍/贏家綠/溫拿棕</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2 h-100" style="list-style-type: disc;">
+                                       <li>5奈米八核心處理器 出色效能</li>
+                                       <li>120Hz 畫面更新頻率 細膩流暢</li>
+                                       <li>5000萬高畫素 4+1 鏡頭</li>
+                                    </ol>
+                                    
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="M33" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="M33">
+                                                <span class="badge bg-light text-dark">128 GB</span>
+                                                <br> NT8,490</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- 層 Galaxy A-->
+         <div class="accordion-item">
+            <!-- 手風琴樣式 -->
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#GalaxyA" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  Galaxy A系列 - 讓所有人嘆為觀止 - 7,990起
+               </button>
+            </h2>
+            <!-- 內容 Galaxy A -->
+            <div id="GalaxyA" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingTwo">
+               <div class="accordion-body">
+
+                  <div class="row  gy-4">
+                     <!-- Galaxy A54 5G-->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/sm-a5460lvdbri/gallery/tw-galaxy-a54-5g-sm-a546-sm-a5460lvdbri-thumb-535678522?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy A54 5G</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">紫/黑/綠/白</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>超明亮夜幕攝影</li>
+                                       <li>卓越性能與速度</li>
+                                       <li>承諾環境永續</li>
+                                    </ol>
+                                    
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A54-5G-128" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A54-5G-128">
+                                                <span class="badge bg-light text-dark">128 GB</span>
+                                                <br>NT13,990</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A54-5G-256" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A54-5G-256">
+                                                <span class="badge bg-light text-dark">256 GB</span>
+                                                <br>NT$15,990</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy A34 5G-->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/sm-a3460lgcbri/gallery/tw-galaxy-a34-5g-sm-a346-453130-sm-a3460lgcbri-thumb-535972064?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy A34 5G</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">紫/黑/綠/白</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>超明亮夜幕攝影</li>
+                                       <li>卓越性能與速度</li>
+                                       <li>承諾環境永續</li>
+                                    </ol>
+                                    
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A34-5G-128" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A34-5G-128">
+                                                <span class="badge bg-light text-dark">6+128 GB</span>
+                                                <br>NT11,990</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A34-5G-256" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A34-5G-256">
+                                                <span class="badge bg-light text-dark">8+256 GB</span>
+                                                <br>NT$12,990</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy A14 5G-->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/sm-a146plggbri/gallery/tw-galaxy-a14-5g-sm-a146-sm-a146plggbri-thumb-534775962?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy A14 5G</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">紅/黑/綠</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>5000萬高畫素主鏡頭</li>
+                                       <li>6.6吋超大螢幕</li>
+                                       <li>5000mAh 超大電量</li>
+                                    </ol>
+
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A14-5G-64" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A14-5G-64">
+                                                <span class="badge bg-light text-dark">64 GB</span>
+                                                <br>NT6,990</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A14-5G-128" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A14-5G-128">
+                                                <span class="badge bg-light text-dark">128 GB</span>
+                                                <br>NT$7,990</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy A23 5G-->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/sm-a236ezkwbri/gallery/tw-galaxy-a23-5g-sm-a236-sm-a236ezkwbri-thumb-533599442?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy A23 5G</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">粉/黑/藍</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>6.6吋 V極限全螢幕</li>
+                                       <li>5000mAh超大電量 讓你持續向前</li>
+                                       <li>5000萬畫素 超強 4+1 鏡頭</li>
+                                    </ol>
+                                    
+                                    
+                                    
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A23-5G-64" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A23-5G-64">
+                                                <span class="badge bg-light text-dark">4+64 GB</span>
+                                                <br>NT8,990</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A23-5G-128" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A23-5G-128">
+                                                <span class="badge bg-light text-dark">6+128 GB</span>
+                                                <br>NT$9,990</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy A13 5G-->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/sm-a136blbubri/gallery/tw-galaxy-a13-5g-sm-a136-sm-a136blbubri-thumb-532812041?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy A13 5G</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">白/黑/藍</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>6.5吋 V極限全螢幕</li>
+                                       <li>5000mAh超大電量 讓你持續向前</li>
+                                       <li>5000萬畫素 超強3鏡頭</li>
+                                    </ol>
+                                    
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A13-5G-64" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A13-5G-64">
+                                                <span class="badge bg-light text-dark">64 GB</span>
+                                                <br>NT6,990</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A13-5G-128" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A13-5G-128">
+                                                <span class="badge bg-light text-dark">128 GB</span>
+                                                <br>NT$7,990</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy A53 5G-->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/2202/gallery/tw-galaxy-a53-5g-a536-sm-a5360zolbri-thumb-531355539?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">
+                                       <span class="badge bg-danger text-light">熱銷</span>
+                                       Galaxy A53 5G</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">粉/白/黑/藍</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>IP67 防水防塵</li>
+                                       <li>6400萬畫素 OIS 光學防手震</li>
+                                       <li>5000mAh 超大電量</li>
+                                    </ol>
+                                                                              
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A53-5G-128" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A53-5G-128">
+                                                <span class="badge bg-light text-dark">8+128 GB</span>
+                                                <br>NT14,990</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A53-5G-256" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A53-5G-256">
+                                                <span class="badge bg-light text-dark">8+256 GB</span>
+                                                <br>NT$15,990</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy A33 5G-->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/sm-a336elbhbri/gallery/tw-galaxy-a33-5g-a336-sm-a336elbhbri-thumb-531355152?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">
+                                          <span class="badge bg-danger text-light">熱銷</span>
+                                          Galaxy A33 5G</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">粉/白/黑/藍</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>IP67 防水防塵</li>
+                                       <li>4800萬畫素 OIS 光學防手震</li>
+                                       <li>5000mAh 超大電量</li>
+                                    </ol>
+                                                                              
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A33-5G-6-128" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A33-5G-6-128">
+                                                <span class="badge bg-light text-dark">6+128 GB</span>
+                                                <br>NT11,990</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="A33-5G-8-128" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="A33-5G-8-128">
+                                                <span class="badge bg-light text-dark">8+128 GB</span>
+                                                <br>NT$12,990</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+
+         <!-- 層 Galaxy S-->
+         <div class="accordion-item">
+            <!-- 手風琴樣式 -->
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#GalaxyS" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  Galaxy S系列 - 手機界的單眼 - 24,900起
+               </button>
+            </h2>
+            <!-- 內容 Galaxy S  -->
+            <div id="GalaxyS" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+               <div class="accordion-body">
+                  <div class="row gy-4">
+                     <!-- Galaxy S23 -->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/2302/gallery/tw-galaxy-s23-s911-sm-s9110zedbri-thumb-534879881?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy S23</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">紫/黑/綠/白</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>超明亮夜幕攝影</li>
+                                       <li>卓越性能與速度</li>
+                                       <li>承諾環境永續</li>
+                                    </ol>
+                                    
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="S23-128" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="S23-128">
+                                                <span class="badge bg-light text-dark">128 GB</span>
+                                                <br>NT26,900</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="S23-256" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="S23-256">
+                                                <span class="badge bg-light text-dark">256 GB</span>
+                                                <br>NT$28,900</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy S23+ -->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/2302/gallery/tw-galaxy-s23-s916-sm-s9160lidbri-thumb-534880852?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy S23+</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">紫/黑/綠/白</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>超明亮夜幕攝影</li>
+                                       <li>卓越性能與速度</li>
+                                       <li>承諾環境永續</li>
+                                    </ol>
+                                    
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="btncheck3">
+                                                <span class="badge bg-light text-dark">256 GB</span>
+                                                <br>NT33,900</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="btncheck4">
+                                                <span class="badge bg-light text-dark">512 GB</span>
+                                                <br>NT$37,900</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy S23 Ultra+ -->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/2302/gallery/tw-galaxy-s23-s918-sm-s9180zggbri-thumb-534880274?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy S23 Ultra</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">紫/黑/綠/白</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>超明亮夜幕攝影</li>
+                                       <li>卓越性能與速度</li>
+                                       <li>承諾環境永續</li>
+                                    </ol>
+                                    
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="btncheck5">
+                                                <span class="badge bg-light text-dark">256 GB</span>
+                                                <br>NT40,900</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="btncheck6">
+                                                <span class="badge bg-light text-dark">512 GB</span>
+                                                <br>NT$44,900</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy S22 -->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/sm-s9010lvdbri/gallery/tw-galaxy-s22-s901-412790-sm-s9010lvdbri-thumb-533417790?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">Galaxy S22</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">紫/黑/綠/白/粉</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>超明亮夜幕攝影</li>
+                                       <li>卓越性能與速度</li>
+                                       <li>超高效電池</li>
+                                    </ol>
+                                    
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="btncheck7">
+                                                <span class="badge bg-light text-dark">128 GB</span>
+                                                <br>NT24,900</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="btncheck8" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="btncheck8">
+                                                <span class="badge bg-light text-dark">256 GB</span>
+                                                <br>NT$26,900</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy S22+ -->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/2202/gallery/tw-galaxy-s22-plus-s906-sm-s9060zwdbri-thumb-530954625?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold"><span class="badge bg-danger text-light me-2">熱銷</span>Galaxy S22+</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">紫/黑/綠/白</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>超明亮夜幕攝影</li>
+                                       <li>卓越性能與速度</li>
+                                       <li>超高效電池</li>
+                                    </ol>
+                                    
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="btncheck9" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="btncheck9">
+                                                <span class="badge bg-light text-dark">128 GB</span>
+                                                <br>NT29,900</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="btncheck10" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="btncheck10">
+                                                <span class="badge bg-light text-dark">256 GB</span>
+                                                <br>NT$31,900</label>
+                                       </div>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Galaxy S22 Ultra -->
+                     <div class="cardblock col-12 col-md-6 col-lg-4 ">
+                        <div class="card overflow-hidden  h-100 border-0 p-2 mb-2" >
+                           <span class="close-btn" onclick="closeCard(this)">&times;</span>
+                              <div class="row align-items-center ">
+                                 <div class="col-4">
+                                    <div class="card-img-top text-center py-3 ">
+                                       <img src="https://images.samsung.com/is/image/samsung/p6pim/tw/2202/gallery/tw-galaxy-s22-ultra-s908-sm-s9080drgbri-thumb-530954926?$172_172_PNG$" alt="" class="img-fluid">
+                                    </div>
+                                 </div>
+                                 <div class="col-8 h-100  d-flex flex-column justify-content-center">
+                                    <div class="card-body m-0 p-0">
+                                       <h5 class="card-title fw-bold">
+                                       <span class="badge bg-danger text-light me-2">熱銷</span>Galaxy S22 Ultra</h5>
+                                       <div class="card-text">samsung</div>
+                                       <span style="font-size: 14px;">紅/紫/黑/綠/白</span>
+                                    </div>
+                                    
+                                    <ol class="mb-2" style="list-style-type: disc;">
+                                       <li>超明亮夜幕攝影</li>
+                                       <li>卓越性能與速度</li>
+                                       <li>超高效電池</li>
+                                    </ol>
+                                    
+                                    <div class="row gx-1 ">
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="S22Ultra-256" autocomplete="off">
+                                             <label class="btn btn-outline-primary rounded-4 py-1 p-0 m-0"  for="S22Ultra-256">
+                                                <span class="badge bg-light text-dark">256 GB</span>
+                                                <br>NT38,900</label>
+                                       </div>
+                                       <div class="btn-group flex-row col-6 " role="group" aria-label="Basic checkbox toggle button group">
+                                             <input type="checkbox" class="btn-check" id="S22Ultra-512" autocomplete="off">
+                                             <label class="btn btn-outline-danger rounded-4 py-1 p-0 m-0"  for="S22Ultra-512">
+                                                <span class="badge bg-light text-dark">512 GB</span>
+                                                <br>NT$28,900</label>
+                                       </div>
+                                       <span><a href="https://www.samsung.com/tw/smartphones/galaxy-s22-ultra/buy/?modelCode=SM-S9080DRHBRI" style="font-size: 14px; text-decoration: none;"> ⇲ [活動] 7/6 - 19：暑期星升級</a></span>
+                                    </div>              
+                                 </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+
+
+      </div>
+            
+
+      </div>
+   </main> 
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>
